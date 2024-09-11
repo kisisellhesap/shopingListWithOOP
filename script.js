@@ -224,7 +224,7 @@ function updateItemInData(id, title, description, link, technologies) {
 const changeIcon = document.querySelector("#myProjects-icon");
 
 changeIcon.addEventListener("click", () => {
-  changeIcon.classList.toggle("fa-power-off");
+  changeIcon.classList.toggle("fa-laptop-code");
   document.querySelector("#projects-container").classList.toggle("collapsed");
   document.querySelector("#footer-container").classList.toggle("collapsed");
   document.querySelector(".search-container").classList.toggle("collapsed");
