@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+footer #footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+footer #footer-container .music-list {
+  overflow: hidden;
+  padding: 0.5rem 0.5rem 0.5rem 0rem;
+  position: relative;
+  border-radius: 10px;
+}
+footer #footer-container .music-list p {
+  font-size: 0.8rem;
+  transform: translate(120%, 0px);
+  animation: songs-effect 30s ease infinite;
+  opacity: 0.8;
+}
+@keyframes songs-effect {
+  0% {
+    transform: translate(120%, 0px);
+  }
+  100% {
+    transform: translate(-120%, 0px);
+  }
+}
+footer #footer-container .footer-links {
+  display: flex;
+  gap: 1rem;
+}
+footer #footer-container .footer-links i {
+  font-size: 1.3rem;
+}
+footer .collapsed {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.projects-section #projects-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+.projects-section #projects-container .add-project-container {
+  background-color: rgba(252, 233, 241, 0.3);
+  padding: 2rem;
+  border-radius: 3px;
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  width: 30%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  box-shadow: 0px 3px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.projects-section #projects-container .add-project-container .add-project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.projects-section #projects-container .add-project-container .add-project-header .line {
+  width: 100%;
+  height: 3px;
+  background-color: #fce9f1;
+  border-radius: 3px;
+}
+.projects-section #projects-container .add-project-container .add-project-header h1 {
+  color: #fce9f1;
+  height: -moz-fit-content;
+  height: fit-content;
+  white-space: nowrap;
+  font-size: 1rem;
+}
+.projects-section #projects-container .add-project-container .add-project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.projects-section #projects-container .add-project-container .add-project-form .project-input-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+.projects-section #projects-container .add-project-container .add-project-form .project-input-div label {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  font-size: 0.8rem;
+  pointer-events: none;
+  color: #fce9f1;
+}
+.projects-section #projects-container .add-project-container .add-project-form .project-input-div label:before {
+  content: attr(title);
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  white-space: nowrap;
+  color: #fce9f1;
+  pointer-events: none;
+}
+.projects-section #projects-container .add-project-container .add-project-form .project-input-div input:not(:-moz-placeholder-shown) + label {
+  top: -15px;
+  left: 0;
+}
+.projects-section #projects-container .add-project-container .add-project-form .project-input-div input:focus + label, .projects-section #projects-container .add-project-container .add-project-form .project-input-div input:not(:placeholder-shown) + label {
+  top: -15px;
+  left: 0;
+}
+.projects-section #projects-container .add-project-container .add-project-form .project-input-div input:focus + label::before {
+  top: -5px;
+  font-weight: 700;
+}
+.projects-section #projects-container .add-project-container .add-project-form .project-input-div input:valid + label::before {
+  top: -5px;
+  font-weight: 700;
+}
+.projects-section #projects-container .add-project-container .add-controls {
+  display: flex;
+  flex-direction: column;
+}
+.projects-section #projects-container .add-project-container .add-controls button {
+  padding: 0.7rem;
+  color: #fce9f1;
+  background-color: transparent;
+  border: 1px solid #fce9f1;
+  border-radius: 5px;
+}
+.projects-section #projects-container .add-project-container .add-controls button:hover {
+  background-color: #fce9f1;
+  color: #080202;
+  border: 1px solid white;
+}
+.projects-section #projects-container .active-scrollbar {
+  overflow-y: scroll !important;
+}
+.projects-section #projects-container .my-projects-container {
+  width: 65%;
+  height: 429.6px;
+  overflow-y: hidden;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.projects-section #projects-container .my-projects-container::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+.projects-section #projects-container .my-projects-container::-webkit-scrollbar-track {
+  background: #fce9f1;
+  border-radius: 10px;
+}
+.projects-section #projects-container .my-projects-container::-webkit-scrollbar-thumb {
+  background: #080202;
+  border-radius: 10px;
+}
+.projects-section #projects-container .my-projects-container .my-projects-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 200px;
+  background-color: rgba(252, 233, 241, 0.3);
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+  border-radius: 3px;
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+}
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-header-wrapper .my-project-controls {
+  display: flex;
+  gap: 1rem;
+}
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-header-wrapper .my-project-controls i:nth-child(1) {
+  font-size: 0.9rem;
+}
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-desc-wrapper,
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-link-wrapper,
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-technologies-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-desc-wrapper *,
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-link-wrapper *,
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-technologies-wrapper * {
+  font-family: monospace;
+}
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-desc-wrapper p,
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-link-wrapper p,
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-technologies-wrapper p {
+  line-height: 1.2rem;
+}
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-desc-wrapper .project-technologies,
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-link-wrapper .project-technologies,
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-technologies-wrapper .project-technologies {
+  display: flex;
+  gap: 0.5rem;
+}
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-desc-wrapper .project-technologies span,
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-link-wrapper .project-technologies span,
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-technologies-wrapper .project-technologies span {
+  font-family: monospace;
+}
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-footer-wrapper {
+  margin-top: auto;
+  display: flex;
+}
+.projects-section #projects-container .my-projects-container .my-projects-items .project-item .my-project-footer-wrapper p {
+  margin-left: auto;
+  font-size: 0.7rem;
+  opacity: 0.6;
+  font-family: monospace;
+}
+.projects-section .collapsed {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    visibility: visible;
+  }
+}
+header {
+  height: 100px;
+}
+header #header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+}
+header #header-container a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 0px 0px 50px #73bbc9;
+}
+header #header-container .header-settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+header #header-container .header-settings .search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transition: all 0.2s ease;
+}
+header #header-container .header-settings .search-container input::-moz-placeholder {
+  color: #fce9f1;
+}
+header #header-container .header-settings .search-container input::placeholder {
+  color: #fce9f1;
+}
+header #header-container .header-settings .collapsed {
+  opacity: 0;
+  pointer-events: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Special Elite", system-ui;
+  color: #fce9f1;
+}
+
+i {
+  font-size: 1.1rem;
+  transform: translate(0px, 0px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+i:hover {
+  transform: translate(0px, -3px);
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: rgb(8, 2, 2);
+  background: linear-gradient(197deg, rgba(8, 2, 2, 0.9108018207) 0%, rgba(8, 2, 2, 0) 52%, rgb(8, 2, 2) 85%), url("./images/bg.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bodyEffect {
+  animation: blurEffect 30s ease-in-out infinite;
+}
+
+@keyframes blurEffect {
+  0% {
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+  }
+  50% {
+    -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+  }
+  100% {
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+  }
+}
+.container-wrapper {
+  width: 70%;
+  min-width: 650px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projects-section #projects-container .add-project-container .add-project-form .project-input-div input, header #header-container .header-settings .search-container input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fce9f1;
+  padding: 0.3rem;
+}/*# sourceMappingURL=main.css.map */

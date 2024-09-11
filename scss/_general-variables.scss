@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+
+@import "./color-variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Special Elite", system-ui;
+  color: $color-pink;
+}
+
+i {
+  font-size: 1.1rem;
+  transform: translate(0px, 0px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &:hover {
+    transform: translate(0px, -3px);
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: rgb(8, 2, 2);
+  background: linear-gradient(
+      197deg,
+      rgba(8, 2, 2, 0.9108018207282913) 0%,
+      rgba(8, 2, 2, 0) 52%,
+      rgba(8, 2, 2, 1) 85%
+    ),
+    url("./images/bg.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bodyEffect {
+  animation: blurEffect 30s ease-in-out infinite;
+}
+
+@keyframes blurEffect {
+  0% {
+    backdrop-filter: blur(2px);
+  }
+  50% {
+    backdrop-filter: blur(15px);
+  }
+  100% {
+    backdrop-filter: blur(2px);
+  }
+}
+
+.container-wrapper {
+  width: 70%;
+  min-width: 650px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+%inputstyle {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fce9f1;
+  padding: 0.3rem;
+}

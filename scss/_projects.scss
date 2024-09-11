@@ -1,0 +1,251 @@
+@import "./color-variables";
+
+.projects-section {
+  #projects-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+    // .intro-title {
+    //   background-color: rgba(252, 233, 241, 0.3);
+    //   padding: 1rem;
+    //   border-radius: 3px;
+    //   backdrop-filter: blur(7px);
+
+    //   p {
+    //     width: 100%;
+    //     white-space: nowrap;
+    //     overflow: hidden;
+    //     font-size: 0.8rem;
+    //     line-height: 1.5rem;
+    //     &:nth-child(1) {
+    //       animation: typing 3s steps(80);
+    //     }
+    //     &:nth-child(2) {
+    //       animation: typing 3s 3s steps(71) forwards;
+    //       visibility: hidden;
+    //     }
+    //     &:nth-child(3) {
+    //       animation: typing 3s 6s steps(40) forwards;
+    //       visibility: hidden;
+    //     }
+    //     &:nth-child(4) {
+    //       animation: typing 3s 9s steps(48) forwards;
+    //       visibility: hidden;
+    //     }
+    //   }
+    // }
+
+    .add-project-container {
+      background-color: rgba(252, 233, 241, 0.3);
+      padding: 2rem;
+      border-radius: 3px;
+      backdrop-filter: blur(7px);
+      width: 30%;
+      min-width: 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      box-shadow: 0px 3px 10px 5px rgba(0, 0, 0, 0.3);
+
+      .add-project-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        .line {
+          width: 100%;
+          height: 3px;
+          background-color: $color-pink;
+          border-radius: 3px;
+        }
+        h1 {
+          color: $color-pink;
+          height: fit-content;
+          white-space: nowrap;
+          font-size: 1rem;
+        }
+      }
+
+      .add-project-form {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+
+        .project-input-div {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          position: relative;
+
+          label {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            font-size: 0.8rem;
+            pointer-events: none;
+            color: $color-pink;
+
+            &:before {
+              content: attr(title);
+              position: absolute;
+              top: 15px;
+              left: 0px;
+              white-space: nowrap;
+              color: $color-pink;
+              pointer-events: none;
+            }
+          }
+          input {
+            @extend %inputstyle;
+
+            &:focus + label,
+            &:not(:placeholder-shown) + label {
+              top: -15px;
+              left: 0;
+            }
+
+            &:focus + label::before {
+              top: -5px;
+              font-weight: 700;
+            }
+
+            &:valid + label::before {
+              top: -5px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+
+      .add-controls {
+        display: flex;
+        flex-direction: column;
+
+        button {
+          padding: 0.7rem;
+          color: $color-pink;
+          background-color: transparent;
+          border: 1px solid $color-pink;
+          border-radius: 5px;
+
+          &:hover {
+            background-color: $color-pink;
+            color: $color-dark;
+            border: 1px solid white;
+          }
+        }
+      }
+    }
+
+    .active-scrollbar {
+      overflow-y: scroll !important;
+    }
+
+    .my-projects-container {
+      width: 65%;
+      height: 429.6px;
+      overflow-y: hidden;
+
+      &::-webkit-scrollbar {
+        width: 10px;
+        border-radius: 10px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: $color-pink;
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: $color-dark;
+        border-radius: 10px;
+      }
+
+      /* Handle on hover */
+
+      .my-projects-items {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        .project-item {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          min-height: 200px;
+          background-color: rgba(252, 233, 241, 0.3);
+          padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+          border-radius: 3px;
+          backdrop-filter: blur(7px);
+          .my-project-header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h1 {
+            }
+            .my-project-controls {
+              display: flex;
+              gap: 1rem;
+              i {
+                &:nth-child(1) {
+                  font-size: 0.9rem;
+                }
+              }
+            }
+          }
+          .my-project-desc-wrapper,
+          .my-project-link-wrapper,
+          .my-project-technologies-wrapper {
+            display: flex;
+            gap: 1rem;
+            * {
+              font-family: monospace;
+            }
+            h4 {
+            }
+            p {
+              line-height: 1.2rem;
+            }
+            a {
+            }
+
+            .project-technologies {
+              display: flex;
+              gap: 0.5rem;
+              span {
+                font-family: monospace;
+              }
+            }
+          }
+          .my-project-footer-wrapper {
+            margin-top: auto;
+            display: flex;
+            p {
+              margin-left: auto;
+              font-size: 0.7rem;
+              opacity: 0.6;
+              font-family: monospace;
+            }
+          }
+        }
+      }
+    }
+  }
+  .collapsed {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    visibility: visible;
+  }
+}

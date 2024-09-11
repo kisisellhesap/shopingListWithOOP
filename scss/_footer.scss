@@ -1,0 +1,50 @@
+@import "./color-variables";
+
+footer {
+  #footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+
+    .music-list {
+      overflow: hidden;
+      padding: 0.5rem 0.5rem 0.5rem 0rem;
+      position: relative;
+      border-radius: 10px;
+
+      p {
+        font-size: 0.8rem;
+        transform: translate(120%, 0px);
+        animation: songs-effect 30s ease infinite;
+        opacity: 0.8;
+      }
+    }
+
+    @keyframes songs-effect {
+      0% {
+        transform: translate(120%, 0px);
+      }
+      100% {
+        transform: translate(-120%, 0px);
+      }
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+      i {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  .collapsed {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+//   background-color: $color-pink;
+//   color: $color-dark;
+//   border-radius: 100%;
+//   padding: 0.5rem;
